@@ -12,7 +12,7 @@ function News() {
     const fetchData = async () => {
       try {
         const res = await fetch(
-          `https://newsapi.org/v2/everything?q=${category}&apiKey=YOUR_API_KEY`
+          `https://newsapi.org/v2/everything?q=${category}&apiKey=39c3025e706146f99c1db7b6e2295f6e`
         );
         const data = await res.json();
         if (data.articles) {
