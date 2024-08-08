@@ -12,7 +12,7 @@ function News() {
     const fetchData = async () => {
       try {
         const res = await fetch(
-          `https://newsapi.org/v2/everything?q=${category}&apiKey=39c3025e706146f99c1db7b6e2295f6e`
+          `https://newsapi.org/v2/everything?q=${category}&apiKey=YOUR_API_KEY`
         );
         const data = await res.json();
         if (data.articles) {
@@ -36,7 +36,7 @@ function News() {
 
   return (
     <div className="p-2 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 gap-4">
-      {articles.length > 0 ? (
+      {articles && articles.length > 0 ? (
         articles.map((article, index) => (
           <div key={index} className="p-4 max-w-sm rounded overflow-hidden shadow-lg h-full flex flex-col">
             {article.urlToImage && (
