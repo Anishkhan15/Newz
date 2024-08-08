@@ -7,7 +7,7 @@ function Nav() {
 
   const handleSearch = () => {
     if (searchQuery.trim()) {
-      navigate(`/news/${searchQuery}`);
+      navigate(`/news/${encodeURIComponent(searchQuery.trim())}`);
     }
   };
 
